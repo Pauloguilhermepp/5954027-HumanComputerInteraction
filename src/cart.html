@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img alt="Imagem do logo da empresa (NerdTech)" src="../img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="shop.html">Loja</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a id="help">Ajuda</a></li>
+                <li id="lg-bag"><a href="#" class="active"><i class="fal fa-shopping-cart cart"></i></a></li>
+                <a id="close" href="#"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="address-info" class="section-p1">
+        <h3>Informações do Comprador</h3>
+        <form>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email de Contato:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="num_card">Número do Cartão:</label>
+            <input type="text" id="num_card" name="num_card" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required><br>
+
+            <button type="submit" class="normal">Enviar</button>
+        </form>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remover</td>
+                    <td>Imagem</td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                    <td>Quantidade</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img alt="Imagem de uma camiseta" src="../img/products/f1.png" alt=""></td>
+                    <td>Camiseta 1</td>
+                    <td>R$ 149.00</td>
+                    <td><input type="number" value="1" name="" id="quantity_1" min="0"></td>
+                    <td id="total_1">R$ 149.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img alt="Imagem de uma camiseta" src="../img/products/f2.png" alt=""></td>
+                    <td>Camiseta 2</td>
+                    <td>R$ 149.00</td>
+                    <td><input type="number" value="1" name="" id="quantity_2" min="0"></td>
+                    <td id="total_2">R$ 149.00</td>
+                </tr>
+                <tr id="TR2hide">
+                    <td id="circle"><a><i class="far fa-times-circle"></i></a></td>
+                    <td><img alt="Imagem de uma camiseta" src="../img/products/f3.png" alt=""></td>
+                    <td>Camiseta 3</td>
+                    <td>R$ 149.00</td>
+                    <td><input type="number" value="1" name="" id="quantity_3" min="0"></td>
+                    <td id="total_3">R$ 149.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="subtotal" style="text-align: center; margin: 0 auto; display: inline-block;">
+            <h3>Total do Carrinho</h3>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>Total do Carrinho</td>
+                    <td id="subtotal2pay">R$ 417</td>
+                </tr>
+                <tr>
+                    <td>Frete</td>
+                    <td>Grátis</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong id="total2pay">R$ 417</strong></td>
+                </tr>
+            </table>
+            <button class="normal" onclick="showGoToThePaymentAlert()">Prosseguir para o pagamento</button>
+        </div>
+    </section>
+    
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img alt="Imagem do logo da empresa" class="logo" src="../img/logo.png" alt="">
+            <p>
+                <strong>Endereço:</strong> Av. Bandeirantes, 3900, São Paulo, SP | 
+                <strong>Telefone:</strong> (11) 98888-8888 | 
+                <strong>Horário:</strong> 10:00 - 18:00, Seg - Sex | 
+                <strong>Redes Sociais:</strong>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </p>
+        </div>
+        <div class="col install">
+            <p>Formas de Pagamento</p>
+            <img alt="Cartões de Crédito Visa e Martercard" src="../img/pay/cards.png">
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Nerd Tech</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const subtotal = document.getElementById('subtotal2pay');
+        const total_value = document.getElementById('total2pay');
+        
+        const quantityInput_1 = document.getElementById('quantity_1');
+        const totalTd_1 = document.getElementById('total_1');
+        quantityInput_1.addEventListener('input', () => {
+            const quantity = parseInt(quantityInput_1.value, 10);
+            const price = 149.00;
+            const total = quantity * price;
+            totalTd_1.textContent = `R$${total.toFixed(2)}`;
+
+            const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10) + parseInt(quantityInput_3.value, 10));
+            total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+            subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+        });
+
+        const quantityInput_2 = document.getElementById('quantity_2');
+        const totalTd_2 = document.getElementById('total_2');
+        quantityInput_2.addEventListener('input', () => {
+            const quantity = parseInt(quantityInput_2.value, 10);
+            const price = 149.00;
+            const total = quantity * price;
+            totalTd_2.textContent = `R$${total.toFixed(2)}`;
+
+            const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10) + parseInt(quantityInput_3.value, 10));
+            total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+            subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+        });
+
+        const quantityInput_3 = document.getElementById('quantity_3');
+        const totalTd_3 = document.getElementById('total_3');
+        quantityInput_3.addEventListener('input', ()=> {
+            const quantity = parseInt(quantityInput_3.value, 10);
+            const price = 149.00;
+            const total = quantity * price;
+            totalTd_3.textContent = `R$${total.toFixed(2)}`;
+
+            const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10) + parseInt(quantityInput_3.value, 10));
+            total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+            subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+        });
+
+        function validateEmail(email) {
+            if (!email.includes('@')) {
+                return 'O endereço de email deve conter o símbolo "@".';
+            }
+
+            const [localPart, domainPart] = email.split('@');
+            if (localPart.length === 0) {
+                return 'O endereço de email deve conter uma parte antes do símbolo "@".';
+            }
+
+            if (domainPart.length === 0) {
+                return 'O endereço de email deve conter uma parte após o símbolo "@".';
+            }
+
+            if (domainPart.indexOf('.') === -1) {
+                return 'O endereço de email deve conter um domínio válido após o símbolo "@".';
+            }
+
+            return '';
+        }
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const emailInput = document.getElementById('email');
+            const errorMessage = validateEmail(emailInput.value);
+            if (errorMessage) {
+                alert(errorMessage);
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById('circle').addEventListener("click", () => {
+            
+            let wrapper = document.getElementById('TR2hide')
+            wrapper.hidden = true;
+
+            const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10) );
+            total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+            subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+        })
+
+        document.getElementById("help").addEventListener("click", () => {
+            alert("Esta é a tela do carrinho, aqui você confirma os produtos que esta comprando.")
+        })
+
+        document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'z') {
+                e.preventDefault();
+
+                let wrapper = document.getElementById('TR2hide')
+                wrapper.hidden = false;
+
+                const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10) + parseInt(quantityInput_3.value, 10) );
+                total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+                subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'y') {
+                e.preventDefault();
+
+                let wrapper = document.getElementById('TR2hide')
+                wrapper.hidden = true;
+
+                const total2pay = 149.00 * (parseInt(quantityInput_1.value, 10) + parseInt(quantityInput_2.value, 10));
+                total_value.textContent = `R$ ${total2pay.toFixed(2)}`;
+                subtotal.textContent = `R$ ${total2pay.toFixed(2)}`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

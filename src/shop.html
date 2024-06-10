@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img alt="Imagem do logo da empresa (NerdTech)" src="../img/logo.png" class="logo" alt=""></a>
+        
+        <div id="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Digite para pesquisar...">
+            <button id="bt1" onclick="searchImage()">Pesquisar</button>
+        </div>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a class="active" href="shop.html">Loja</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a id="help">Ajuda</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a></li>
+                <!-- <a href="#" id="close"><i class="far fa-times"></i></a> -->
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    
+    
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro" >
+                <div onclick="window.open('.\\products\\p1.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f1.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 1</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p2.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f2.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 2</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p3.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f3.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 3</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p4.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f4.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 4</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p5.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f5.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 5</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p6.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f6.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 6</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p7.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f7.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 7</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+            <div class="pro">
+                <div onclick="window.open('.\\products\\p8.html')">
+                    <img alt="Imagem de uma camiseta" src="../img/products/f8.png" alt="">
+                    <div class="des">
+                        <h5>Camiseta 8</h5>
+                        <h4>R$ 149.00</h4>
+                    </div>
+                </div>
+                <a><i class="fal fa-shopping-cart cart" onclick="showAlert()"></i></a>
+            </div>
+    </section>
+    
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section>
+        
+        <footer class="section-p1">
+            <div class="col">
+                <img alt="Imagem do logo da empresa" class="logo" src="../img/logo.png" alt="">
+                <p>
+                    <strong>Endereço:</strong> Av. Bandeirantes, 3900, São Paulo, SP | 
+                    <strong>Telefone:</strong> (11) 98888-8888 | 
+                    <strong>Horário:</strong> 10:00 - 18:00, Seg - Sex | 
+                    <strong>Redes Sociais:</strong>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </p>
+            </div>
+    
+            <div class="copyright">
+                <p>© 2024, Nerd Tech</p>
+            </div>
+        </footer>
+        
+        
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener("keydown", (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'f') {
+                e.preventDefault();
+                document.getElementById("search-input").focus();
+            }
+
+            if (e.key === "Enter" ) {
+                searchImage();
+            }
+
+            console.log(e);
+        });
+
+        function validateEmail(email) {
+            if (!email.includes('@')) {
+                return 'O endereço de email deve conter o símbolo "@".';
+            }
+
+            const [localPart, domainPart] = email.split('@');
+            if (localPart.length === 0) {
+                return 'O endereço de email deve conter uma parte antes do símbolo "@".';
+            }
+
+            if (domainPart.length === 0) {
+                return 'O endereço de email deve conter uma parte após o símbolo "@".';
+            }
+
+            if (domainPart.indexOf('.') === -1) {
+                return 'O endereço de email deve conter um domínio válido após o símbolo "@".';
+            }
+
+            return '';
+        }
+
+        document.getElementById('submitbtn').addEventListener('click', function(event) {
+            const emailInput = document.getElementById('textField');
+            const errorMessage = validateEmail(emailInput.value);
+            if (errorMessage) {
+                alert(errorMessage);
+                event.preventDefault();
+            }else {
+                alert("E-MAIL CONFIRMADO!!!\nvocê recebera promoções por e-mail");
+            }
+        });
+
+        function showAlert() {
+            alert("Item adicionado ao carrinho");
+        }
+
+        document.getElementById("help").addEventListener("click", (event) => {
+            event.preventDefault();
+            alert("")
+        })
+        </script>
+        </body>
+        
+        </html>
+                

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href=""><img alt="Imagem do logo da empresa (NerdTech)" src="../img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="shop.html">Loja</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a class="active" href="contact.html">Contato</a></li>
+                <li><a id="help">Ajuda</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a></li>
+                <a id="close" href="#"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="contact-info" class="section-p1">
+        <div class="details">
+            <h2>Entre em contato conosco ainda hoje!</h2>
+            <div class="contact-grid">
+                <div>
+                    <i class="fal fa-map"></i>
+                    <p>Av. Bandeirantes, 3900, SP</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(11) 98888-8888</p>
+                </div>
+                <div>
+                    <i class="far fa-envelope"></i>
+                    <p>contato@nerdtech.com</p>
+                </div>
+                <div>
+                    <i class="far fa-clock"></i>
+                    <p>Segunda a sexta: 10:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section>
+        <div class="map-container">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.635314588741!2d-47.84857808968811!3d-21.166906679901956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bdc299d0b773%3A0xb5bd25d961a34cd!2sDepartamento%20de%20Computa%C3%A7%C3%A3o%20e%20Matem%C3%A1tica%20da%20FFCLRP-USP!5e0!3m2!1spt-PT!2sbr!4v1717895021347!5m2!1spt-PT!2sbr" width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-style">
+        <form action="">
+            <h2>Adoramos ouvir você, deixe seu feedback!</h2>
+            <input type="text" name="" id="" placeholder="Seu Nome" required>
+            <input type="email" name="" id="'textField'" placeholder="E-mail" required>
+            <input type="text" name="" id="" placeholder="Assunto" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+            <button type="submit" class="normal">Enviar</button>
+        </form>
+    </section>
+
+    <section id="promotions" class="section-m1 section-p1">
+        <div class="newstext">
+            <h4>Inscreva-se para receber promoções</h4>
+            <p>Receba atualizações por e-mail e <span>ofertas especiais.</span></p>
+        </div>
+        <div class="form">
+            <input id="textField2" id="submitbtn" type="email" name="" placeholder="Seu endereço de e-mail" id="" required>
+            <button id="submitbtn" class="normal">Inscreva-se</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img alt="Imagem do logo da empresa" class="logo" src="../img/logo.png" alt="">
+            <p>
+                <strong>Endereço:</strong> Av. Bandeirantes, 3900, São Paulo, SP | 
+                <strong>Telefone:</strong> (11) 98888-8888 | 
+                <strong>Horário:</strong> 10:00 - 18:00, Seg - Sex | 
+                <strong>Redes Sociais:</strong>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </p>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Nerd Tech</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        function validateEmail(email) {
+            if (!email.includes('@')) {
+                return 'O endereço de email deve conter o símbolo "@".';
+            }
+
+            const [localPart, domainPart] = email.split('@');
+            if (localPart.length === 0) {
+                return 'O endereço de email deve conter uma parte antes do símbolo "@".';
+            }
+
+            if (domainPart.length === 0) {
+                return 'O endereço de email deve conter uma parte após o símbolo "@".';
+            }
+
+            if (domainPart.indexOf('.') === -1) {
+                return 'O endereço de email deve conter um domínio válido após o símbolo "@".';
+            }
+
+            return '';
+        }
+
+        function sendFeedback() {
+            const emailInput = document.getElementById('textField');
+            const errorMessage = validateEmail(emailInput.value);
+            if (errorMessage) {
+                alert(errorMessage);
+                event.preventDefault(); 
+            }else {
+                alert("E-MAIL CONFIRMADO!!!\nvocê recebera promoções por e-mail");
+            }
+        }
+
+        document.getElementById('submitbtn').addEventListener('click', function(event) {
+            const emailInput = document.getElementById('textField2');
+            const errorMessage = validateEmail(emailInput.value);
+            if (errorMessage) {
+                alert(errorMessage);
+                event.preventDefault();
+            }else {
+                alert("E-MAIL CONFIRMADO!!!\nvocê recebera promoções por e-mail");
+            }
+        });
+
+        document.getElementById("help").addEventListener("click", () => {
+            alert("Esta é a tela de contato, aqui você encontra nosso telefome, e-mail e endereço.")
+        })
+    </script>
+
+</body>
+
+</html>
+

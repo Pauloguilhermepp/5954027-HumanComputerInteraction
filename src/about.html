@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img alt="Imagem do logo da empresa (NerdTech)" src="../img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="shop.html">Loja</a></li>
+                <li><a class="active" href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a id="help">Ajuda</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fal fa-shopping-cart cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <div>
+            <h2>Quem Somos?</h2>
+            <p>Olá! Seja bem-vindo à Nerd Tech! Somos Paulo e William, dois amigos apaixonados pelo universo nerd que decidiram transformar essa paixão em um projeto incrível: uma loja de roupas nerds de alta qualidade.</p>
+            <p>Tudo começou com o Paulo, um fã de quadrinhos e filmes de ficção científica desde sempre. Ele sempre sonhou em criar um lugar onde os fãs pudessem encontrar roupas que expressassem seu amor pelos personagens e histórias que eles adoram. Com um olhar atento para os detalhes, Paulo se dedica a garantir que cada peça da Nerd Tech seja especial e de alta qualidade.</p>
+            <p>Já o William, que é um gamer dedicado e amante de séries de TV, traz sua criatividade e experiência para a Nerd Tech. Ele adora criar designs únicos que capturam a essência dos universos que amamos. Sua energia e entusiasmo estão presentes em cada coleção que lançamos, fazendo da nossa marca um reflexo das nossas paixões.</p>
+            <p>Na Nerd Tech, acreditamos que a moda nerd é mais do que apenas vestir uma camisa. É uma forma de mostrar quem você é, de se conectar com outros fãs e de celebrar os personagens e histórias que nos inspiram. Por isso, cada peça é feita com materiais de alta qualidade, para que sejam confortáveis e duráveis.</p>
+            <p>Estamos sempre procurando novas ideias e tendências para trazer o melhor da moda geek para você. Desde camisetas até moletons, cada item da nossa loja é pensado para ser uma extensão do seu universo favorito, para que você possa levar um pedacinho dele com você onde for.</p>
+            <p>Nossa jornada começou com a vontade de criar algo único, e tem sido incrível ver como a Nerd Tech cresceu e se tornou uma comunidade de fãs apaixonados. Queremos continuar a compartilhar essa aventura com você, oferecendo produtos que não só atendam às suas expectativas, mas que as superem.</p>
+            <p>Obrigado por fazer parte da nossa história. Juntos, vamos transformar a Nerd Tech em mais do que uma loja – em um ponto de encontro para todos os nerds que, assim como nós, amam viver e vestir sua paixão!</p>
+            <p>Seja bem-vindo à Nerd Tech. Seu universo, sua moda.</p>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img alt="Imagem do logo da empresa" class="logo" src="../img/logo.png" alt="">
+            <p>
+                <strong>Endereço:</strong> Av. Bandeirantes, 3900, São Paulo, SP | 
+                <strong>Telefone:</strong> (11) 98888-8888 | 
+                <strong>Horário:</strong> 10:00 - 18:00, Seg - Sex | 
+                <strong>Redes Sociais:</strong>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </p>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Nerd Tech</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        function validateEmail(email) {
+            if (!email.includes('@')) {
+                return 'O endereço de email deve conter o símbolo "@".';
+            }
+
+            const [localPart, domainPart] = email.split('@');
+            if (localPart.length === 0) {
+                return 'O endereço de email deve conter uma parte antes do símbolo "@".';
+            }
+
+            if (domainPart.length === 0) {
+                return 'O endereço de email deve conter uma parte após o símbolo "@".';
+            }
+
+            if (domainPart.indexOf('.') === -1) {
+                return 'O endereço de email deve conter um domínio válido após o símbolo "@".';
+            }
+
+            return '';
+        }
+
+        document.getElementById('submitbtn').addEventListener('click', function(event) {
+            const emailInput = document.getElementById('textField');
+            const errorMessage = validateEmail(emailInput.value);
+            if (errorMessage) {
+                alert(errorMessage);
+                event.preventDefault();
+            }else {
+                alert("E-MAIL CONFIRMADO!!!\nvocê recebera promoções por e-mail");
+            }
+        });
+
+        document.getElementById("help").addEventListener("click", () => {
+            alert("Esta é a tela de informações da empresa, aqui você acompanha a nossa historia.")
+        })
+    </script>
+</body>
+
+</html>
